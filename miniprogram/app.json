@@ -1,0 +1,24 @@
+{
+  "pages": [
+  
+    "pages/denglu/denglu",
+    "pages/admin/admin",
+    "pages/scancode/scancode",
+    "pages/createcode/createcode",
+    "pages/register/register",
+    "pages/showlist/showlist",
+    "pages/userquery/userquery",
+    "pages/showuser/showuser",
+    "pages/showpiao/showpiao",
+    "pages/showlogs/showlogs",
+    "pages/showtemplate/showtemplate"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

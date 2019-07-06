@@ -1,0 +1,36 @@
+<!--miniprogram/pages/showuser/showuser.wxml-->
+<view wx:if="{{userlist.length<2}}">无账号</view>
+<block wx:for="{{userlist}}" wx:key="">
+  <view display="flex" wx:if="{{item.gonghao!='admin'}}">
+    <view class="">账号：{{item.gonghao}}</view>
+    <view class="">密码：{{item.password}}</view>
+    <view class="" wx:if="{{item.limit==1}}">有权限</view>
+    <view class=""  wx:if="{{item.limit==0}}">无权限</view>
+
+    <view>
+
+      <button type="primary" bindtap="modalinput" data-id='{{item._id}}'>设置权限</button>
+
+    </view>
+
+    <modal id="modal" hidden="{{hiddenmodalput}}" title="设置权限"  confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" >
+          <checkbox value="1" checked='{{ck1}}' />有生成二维码权限
+        </label>
+        <label class="checkbox" >
+          <checkbox value="0" checked='{{ck2}}' />无生成二维码权限
+        </label>
+      </checkbox-group>
+
+
+    </modal>
+
+
+
+
+    <button class='' type="primary" data-id='{{item._id}}' bindtap='ondel'>删除账号</button>
+  </view>
+
+</block>

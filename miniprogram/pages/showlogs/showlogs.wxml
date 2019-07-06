@@ -1,0 +1,11 @@
+<!--miniprogram/pages/showlogs/showlogs.wxml-->
+<view class='log' wx:for="{{loglist}}">
+<view>{{item.nickName}}</view>
+<view>{{timelist[index].year}}年{{timelist[index].month+1}}月{{timelist[index].day}}日{{timelist[index].hour}}时{{timelist[index].minute}}分</view>
+<!-- <view>{{item.time}}</view> -->
+<view wx:if="{{item.type=='add'}}">增加安措</view>
+<view wx:if="{{item.type=='del'}}">拆除安措</view>
+<view>票号：{{item.bianhao}}</view>
+<view>设备：{{item.shebei}}</view>
+
+</view>

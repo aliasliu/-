@@ -1,0 +1,21 @@
+<!--miniprogram/pages/showlist/showlist.wxml-->
+<view class='v1'>工作票号：{{querybianhao}}</view>
+<view class='v1' wx:if="{{neirong}}">工作票内容：{{neirong}}</view>
+<form bindsubmit="formSubmit" wx:if="{{!neirong}}">
+    <view class="input-wrapper">
+      <input wx:if="{{!neirong}}" name="neirongm" placeholder="输入工作票内容" />
+    </view>
+
+    <view class="btn-area">
+      <button form-type="submit"  class='add-button'>确认</button>
+    </view>
+  </form>
+<view class='v2' bindtap='onquery'>关联设备：</view>
+<!-- <block wx:for="{{sheheis}}" wx:key="">
+    <view class="shebei">{{item.shebei}}</view>
+</block> -->
+<view class='itemwrapper' wx:for="{{shebeis}}">
+<view class='index'>{{index+1}}</view>
+<view class='bh'>编号：{{item.number}}</view>
+<view class='v3'>{{item.shebei}}</view>
+</view>

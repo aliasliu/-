@@ -1,0 +1,21 @@
+/* miniprogram/pages/admin/admin.wxss */
+.admin{
+  color: lightblue;
+}
+.item-wapper1{
+  width: 100%;
+  margin-top: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.item{
+  margin: 30rpx;
+ 
+}
+.item-wapper2{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

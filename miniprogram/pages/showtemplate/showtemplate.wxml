@@ -1,0 +1,8 @@
+<!--miniprogram/pages/showtemplate/showtemplate.wxml-->
+<view wx:for="{{template}}">
+  <view class='item'>
+    <view class='biaoti'>工作票内容：{{item.biaoti}}</view>
+    <view class='neirong'>相关安措：{{item.text}}</view>
+    <button data-id='{{item._id}}' type='primary' bindtap='ondel'>删除</button>
+  </view>
+</view>

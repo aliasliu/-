@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<!-- <view class='input-wrapper'>
+    <input bindinput='inputHandler' bindconfirm='confirmHandler' placeholder='输入设备名称' value='{{text}}'></input>
+</view> -->
+<view class='top'>
+<!-- <view class='dl'>{{nickName}}已登录</view> -->
+<!-- <button type='primary' class='clear' bindtap='clear'>取消自动登录</button> -->
+</view>
+<button type='primary' bindtap='showpiao' class='dqp'>查看当前工作票</button>
+<input wx:if="{{limit}}"  class='input' name="codestr"  bindinput='oninput'  placeholder="输入想要生成的二维码内容" />
+<view class='button-wrapper'>
+    <button bindtap='createCode' type='primary' wx:if="{{limit}}">生成二维码</button>      
+    <!-- <button bindtap='testFunction'>test</button> -->
+    <button bindtap='gotoscan' type='primary' class='sc'>扫描二维码</button>
+</view>
+<canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+<view class='tip'  bindtap='test' wx:if="{{limit}}">长按保存</view>

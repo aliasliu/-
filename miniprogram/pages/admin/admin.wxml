@@ -1,0 +1,20 @@
+<!--miniprogram/pages/admin/admin.wxml-->
+<!-- <view class='admin'>管理员账号</view> -->
+<view class='item-wapper1'>
+  <button  type='primary' class='item' bindtap='useradmin'>用户管理</button>
+</view>
+<view class='item-wapper2'>
+  <button  type='primary' class='item' bindtap='querylog'>记录查询</button>
+</view>
+<view class='item-wapper2'>
+  <button  type='primary' class='item' bindtap='modalinput'>添加模板</button>
+</view>
+
+<modal id="modal" hidden="{{hiddenmodalput}}" title="导入模板信息" bindconfirm="addtemplate" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+
+    <input type='text' bindinput='inputbiaoti' placeholder="工作票内容：" auto-focus/>
+
+    <textarea class="" 
+    placeholder="相关安措（用逗号分开）："
+    bindblur="inputneirong" ></textarea>
+</modal>

@@ -1,0 +1,46 @@
+<!--miniprogram/pages/denglu/denglu.wxml-->
+<view class="content">
+	<!--pics文件夹下的background.jpg文件-->
+	<image class='background' src="http://i7.hexunimg.cn/2014-07-14/166581186.jpg" mode="aspectFill"></image>
+	<!--页面其它部分-->
+</view>
+<view class='tx'>华能瑞金电厂</view>
+<view class='body'>
+<view wx:if="{gonghao==null&&password==null}}" class='v'>
+  <view display="flex">
+    <!-- <view class='v1'>用户名：</view> -->
+    <view class='input-wrapper'>
+      <input placeholder='请输入账号' class='input' bindinput='inputgonghao' value='{{gonghao}}'></input>
+    </view>
+  </view>
+  
+  <view display="flex">
+    <!-- <view class='v2'>密　码：</view> -->
+    <view class='input-wrapper'>
+      <input placeholder='请输入密码' class='input' password="true" bindinput='inputPassword' value='{{password}}'></input>
+    </view>
+  </view>
+  <view class="checkbox">
+  <checkbox-group bindchange="checkboxChange">
+    <label>
+      <checkbox value="1" checked='{{flag}}' />记住账号密码
+    </label>
+
+  </checkbox-group>
+  </view>
+</view>
+<button class='button' type='primary' bindtap='login' open-type='getUserInfo' bindgetuserinfo='onGotUserInfo'>登录</button>
+</view>
+
+
+
+<!-- <view display:flex class='v1'>
+  <view class='v2'>用户名：</view>
+  <input style="border: 1rpx; solid;border-color: lightblue;
+ placeholder=" 请输入您的用户名 ";  bindinput='inputgonghao';  focus="false "/>
+</view>
+<view  display:flex>
+  <view class='v2'>密　码：</view>
+  <input style="border: 1rpx solid;border-color: lightblue; placeholder="请输入您的密码"; bindinput='inputPassword'; password="true"; focus="false" />
+</view>
+<button class='button' type='primary' bindtap='login'>登陆</button> -->

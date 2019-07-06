@@ -1,0 +1,7 @@
+<!--miniprogram/pages/showpiao/showpiao.wxml-->
+<text>当前工作票：</text>
+
+<view wx:for="{{bianhaolist}}">
+<view class='v1'>票号:{{item}}</view>
+<button class='query-button' type='primary' data-querybianhao='{{item}}' bindtap='onquery'>查看详情</button>
+</view>

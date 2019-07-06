@@ -1,0 +1,61 @@
+<view>
+  <view bindtap="click" class='scan-wrapper'>点我扫一扫</view>
+  <view  wx:if="{{show}}" class='bianhao'>编号：{{show}}</view>
+
+  <view wx:if="{{!shebei}}">
+  <form bindsubmit="querymuban">
+  <input class='inputquery' name="muban" placeholder="查询工作票模板" />
+  <button type='primary' form-type="submit">确定</button>
+  </form>
+  </view>
+
+  <view class='template' wx:if="{{!shebei}}">
+    <view>导入模板: </view>
+    <!-- <Select prop-array='{{selectArray}}' bind:myget='getDate'></Select> -->
+    <picker mode="selector" range="{{selectArray}}" value="{{index1}}" bindchange="listenerPickerSelected1">
+      <text>{{selectArray[index1]}}</text>
+    </picker>
+  </view>
+ 
+  <view class='template' wx:if="{{!shebei}}">
+    <view>设备名称：</view>
+    <picker mode="selector" range="{{ancuos}}" value="{{index2}}" bindchange="listenerPickerSelected2">
+      <text>{{ancuos[index2]}}</text>
+    </picker>
+  </view>
+  <input class='input-wrapper' wx:if="{{flag==0}}" name="paihaom" bindinput='onpaihao'  placeholder="写入标识牌编号" />
+  <form bindsubmit="formSubmit">
+    <view class="input-wrapper">
+      <input wx:if="{{!shebei}}" name="shebeim" value='{{addshebei}}' placeholder="输入设备名称" />
+    </view>
+    <view class="input-wrapper">
+
+      <input wx:if="{{bianhao}}" name="bianhaom" placeholder="关联工作票号" />
+    </view>
+
+    <view class="btn-area">
+      <button form-type="submit" class='add-button'>增加关联工作票</button>
+    </view>
+  </form>
+  <view wx:if="{{shebei}}" class='shebeim'>设备名称：{{shebei}}</view>
+  <view wx:if="{{worklistslen==0}}" class="gzp">当前关联工作票： 无</view>
+  <!-- <view  wx:for="{{bianhao}}" wx:for-index="index" wx:for-item="item">关联工作票号：{{item}}</view> -->
+  <block wx:for="{{worklists}}" wx:key="">
+    <view display="flex">
+      <view class="gzp">关联工作票： {{item.bianhao}}</view>
+      <button class='query-button' data-querybianhao='{{item.bianhao}}' bindtap='onquery'>查</button>
+      <!-- <button class='del-button' data-id='{{item._id}}' data-bianhao='{{item.bianhao}}' bindtap='onDel'>删</button> -->
+
+      <button class='del-button' data-id='{{item._id}}' data-bianhao='{{item.bianhao}}' bindtap='modalinput'>删</button>
+      <modal id="modal" hidden="{{hiddenmodalput}}" title="是否删除此设备" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+
+      </modal>
+
+
+    </view>
+
+  </block>
+
+
+
+</view>

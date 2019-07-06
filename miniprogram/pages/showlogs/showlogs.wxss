@@ -1,0 +1,5 @@
+/* miniprogram/pages/showlogs/showlogs.wxss */
+.log{
+  margin-left: 10rpx;
+  border-bottom: 3rpx solid lightblue;
+}

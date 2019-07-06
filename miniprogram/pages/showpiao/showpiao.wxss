@@ -1,0 +1,7 @@
+/* miniprogram/pages/showpiao/showpiao.wxss */
+.v1{
+  text-align: left;
+  height: 80rpx;
+  background: rgb(rgb(182, 177, 177), green, blue);
+  line-height: 80rpx;
+}

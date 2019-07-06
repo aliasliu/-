@@ -1,0 +1,52 @@
+/* miniprogram/pages/showlist/showlist.wxss */
+.v1{
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.v2{
+	height: 80rpx; /* 高度 */
+	border-width: 0rpx; /* 边框宽度 */
+	border-radius: 10rpx; /* 边框半径 */
+	background: rgb(208, 228, 248); /* 背景颜色 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+  text-align: left;
+  line-height: 80rpx;
+  margin-left: 10rpx;
+}
+.itemwrapper{
+  display: flex;
+  border-bottom: 1rpx solid lightblue;
+  border-radius: 5rpx;
+}
+.index{
+  margin-left: 10rpx;
+  float: left;
+}
+.bh{
+  margin-left: 10rpx;
+  float: left;
+  width: 300rpx;
+}
+.v3{
+  float: left;
+}
+.input-wrapper {
+    /* margin-top: 40rpx; */
+    margin: 20rpx;
+}
+.add-button{ /* 按钮美化 */
+	border-width: 0rpx; /* 边框宽度 */
+	border-radius: 10rpx; /* 边框半径 */
+	background: rgb(31, 143, 255); /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 30rpx; /* 字体大小 */
+  text-align: center;
+  line-height: 80rpx;
+
+}

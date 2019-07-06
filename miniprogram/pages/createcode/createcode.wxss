@@ -1,0 +1,43 @@
+/* pages/index/index.wxss */
+.top{
+  display: flex;
+  height: 50rpx;
+}
+
+.input{
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+}
+
+.button-wrapper {
+    margin-top: 10rpx;
+}
+
+.canvas {
+    margin: 220rpx auto;
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid black; */
+}
+
+.tip {
+    text-align: center;
+}
+.sc{
+  margin-top: 50rpx;
+}
+.dl{
+  font-family: Microsoft YaHei; /* 设置字体 */
+	color: rgba(130, 133, 130, 0.705); /* 字体颜色 */
+	font-size: 40rpx; /* 字体大小 */
+  width: 60%;
+  float: left;
+}
+/* .clear{
+  width: 40%;
+  float:right;
+  line-height: 80rpx;
+  text-align: center;
+ background: rgba(130, 133, 130, 0.705)
+
+} */

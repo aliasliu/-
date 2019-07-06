@@ -1,0 +1,10 @@
+.item{
+  border-bottom: 3rpx solid lightblue
+}
+.biaoti{
+  background-color: blanchedalmond;
+  margin-left: 10rpx;
+}
+.neirong{
+  margin-left: 10rpx;
+}

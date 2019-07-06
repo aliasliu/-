@@ -1,0 +1,20 @@
+<!--miniprogram/pages/userquery/userquery.wxml-->
+<view>
+
+  <button type="primary" bindtap="queryuser" class='bt1'>查询用户</button>
+
+</view>
+
+<view>
+
+  <button type="primary" bindtap="modalinput" class='bt2'>增加用户</button>
+
+</view>
+
+<modal id="modal" hidden="{{hiddenmodalput}}" title="用户信息" bindconfirm="adduser" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+
+    <input type='text' bindinput='inputzhanghao' placeholder="账号：" auto-focus/>
+
+    <input type='number'  bindinput='inputmima'  placeholder="密码：" auto-focus/>
+
+</modal>
