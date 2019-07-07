@@ -1,30 +1,30 @@
-var app=getApp()
+var app = getApp()
 Page({
 
   data: {
-    bianhaolist:null,
-    neironglist:null,
+    bianhaolist: null,
+    neironglist: null,
   },
-  onLoad:function(){
-    var that=this;
+  onLoad: function () {
+    var that = this;
     wx.cloud.callFunction({
-      name:'getgongzuopiao',
-      data:{},
-      success:res=>{
-        var templist=res.result.data;
+      name: 'getgongzuopiao',
+      data: {},
+      success: res => {
+        var templist = res.result.data;
         console.log(templist)
-        var bianhaolist=[];
-        for(var i=0;i<templist.length;i++){
+        var bianhaolist = [];
+        for (var i = 0; i < templist.length; i++) {
           bianhaolist.push(templist[i].bianhao)
         }
         console.log(bianhaolist)
         var r = bianhaolist.filter(function (element, index, self) {
-           return self.indexOf(element) === index;
+          return self.indexOf(element) === index;
         });
-         console.log(r);
-       
+        console.log(r);
+
         that.setData({
-          bianhaolist:r,
+          bianhaolist: r,
         })
         //用票号去gongzuopiao表里找内容
         // const db=wx.cloud.database();
@@ -46,7 +46,7 @@ Page({
         //           neirong: "无"
         //         })
         //       }
-              
+
         //     },
         //     fail:err=>{
         //       console.log(err)
@@ -59,12 +59,12 @@ Page({
 
 
       },
-      fail:err=>{
+      fail: err => {
         console.log(err)
       }
     })
   },
-  onquery:function(e){
+  onquery: function (e) {
     var that = this;
     console.log(e)
     var querybianhao = e.currentTarget.dataset.querybianhao;
@@ -74,5 +74,5 @@ Page({
       url: '../showlist/showlist',
     })
   }
-  
+
 })

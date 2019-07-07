@@ -50,7 +50,7 @@ Page({
     },
     gotoscan: function(){
       wx.navigateTo({
-        url: '../scancode/scancode',
+        url: '../scancode1/scancode1',
       })
     },
     oninput:function(e){

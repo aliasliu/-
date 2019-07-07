@@ -10,12 +10,11 @@
       <button form-type="submit"  class='add-button'>确认</button>
     </view>
   </form>
-<view class='v2' bindtap='onquery'>关联设备：</view>
+<view class='v2' bindtap='onquery'>关联标识牌：</view>
 <!-- <block wx:for="{{sheheis}}" wx:key="">
     <view class="shebei">{{item.shebei}}</view>
 </block> -->
 <view class='itemwrapper' wx:for="{{shebeis}}">
 <view class='index'>{{index+1}}</view>
 <view class='bh'>编号：{{item.number}}</view>
-<view class='v3'>{{item.shebei}}</view>
 </view>

@@ -5,7 +5,7 @@
 <!-- <view>{{item.time}}</view> -->
 <view wx:if="{{item.type=='add'}}">增加安措</view>
 <view wx:if="{{item.type=='del'}}">拆除安措</view>
-<view>票号：{{item.bianhao}}</view>
-<view>设备：{{item.shebei}}</view>
+<view>工作票号：{{item.piaohao}}</view>
+<view>标识牌号：{{item.paihao}}</view>
 
 </view>

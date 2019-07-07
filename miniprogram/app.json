@@ -11,7 +11,8 @@
     "pages/showuser/showuser",
     "pages/showpiao/showpiao",
     "pages/showlogs/showlogs",
-    "pages/showtemplate/showtemplate"
+    "pages/showtemplate/showtemplate",
+    "pages/scancode1/scancode1"
    
   ],
   "window": {
